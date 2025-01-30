@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\definecolor{cell}{HTML}{828282}
+\begin{document}
+\begin{tikzpicture}[x=10mm,y=10mm,every node/.style={text=white}]
+	\foreach \x in {0,1,2}{
+		\foreach \y in {0,1}{
+			\draw[line width=.1mm,fill=cell](\x,\y)rectangle({\x+1},{\y+1});
+		}
+	}
+	\node at(.5,.5){\(b_1\)};
+	\node at(1.5,.5){\(b_2\)};
+	\node at(2.5,.5){\(b_3\)};
+	\node at(.5,1.5){\(b_4\)};
+	\node at(1.5,1.5){\(b_5\)};
+	\node at(2.5,1.5){\(b_6\)};
+\end{tikzpicture}
+\end{document}

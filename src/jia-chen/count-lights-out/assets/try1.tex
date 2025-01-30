@@ -1,0 +1,15 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\definecolor{cell}{HTML}{828282}
+\begin{document}
+\begin{tikzpicture}[x=5mm,y=5mm,every node/.style={text=white}]
+	\foreach \x in {0,1,2,3,4,5}{
+		\foreach \y in {0,1,2,3,4,5}{
+			\draw[line width=.1mm,fill=cell](\x,\y)rectangle({\x+1},{\y+1});
+		}
+	}
+	\node at(.5,.5){\(\times\)};
+	\node at(1.5,.5){\(\times\)};
+	\node at(.5,1.5){\(\times\)};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{amsmath}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[x=6mm,y=6mm]
+	\draw[->](-10.2,0)--(10.2,0);
+	\draw[->](0,-10.2)--(0,10.2);
+	\draw[dashed](0,0)circle(10);
+	\draw(0,4)circle(4) (0,4)circle({4/.95});
+	\draw[fill=black](0,0)circle(.08) ({4*tan(acos(.95))},0)circle(.08) (0,4)circle(.08);
+	\draw[red,->](0,0)--(-.95,0)node[above]{\(\boldsymbol{v}_1\)};
+	\draw[red,->]({4*tan(acos(.95))},0)--++(-.95,-{sqrt(1-.95*.95)})node[below]{\(\boldsymbol{v}_2\)};
+	\draw[blue,<->](0,0)--node[left]{\(r_1\)}(0,4);
+	\draw[blue,<->]({4*tan(acos(.95))},0)--node[right]{\(r_2\)}(0,4);
+	\node at(4,-6){\(\frac{r_2}{r_1}=\frac{v_2}{v_1}\)};
+\end{tikzpicture}
+\end{document}

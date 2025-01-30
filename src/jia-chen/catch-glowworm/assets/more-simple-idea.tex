@@ -1,0 +1,9 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+	\draw(0,0)--node[below]{\(\Delta p\)}(1,0)--node[below right]{\(d_1\)}(5,5)--node[above left]{\(\frac{\Delta p}2\)}(4,4)--node[above left]{\(d_0\)}cycle;
+	\draw(3.9,4.1)--(4,4);
+	\draw[dashed](1,0)--node[below]{\(x\)}(5,0)--node[right]{\(r\)}(5,5);
+\end{tikzpicture}
+\end{document}

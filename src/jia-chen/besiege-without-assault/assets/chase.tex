@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{amsmath}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[x=40mm,y=40mm]
+	\draw[fill=black](0,0)circle(.01) (.5,0)circle(.01) (.5,{.5*sqrt(3)})circle(.01);
+	\draw(0,0)circle(.5) (0,0)circle(1);
+	\draw[dashed](.5,0)--node[right]{\(d\)}(.5,{.5*sqrt(3)});
+	\draw[red,->](.5,0)--(.5,-.25)node[right]{\(\boldsymbol{v}_1\)};
+	\draw[red,->](.5,{.5*sqrt(3)})--({.5+.25*sqrt(3)},{-.25+.5*sqrt(3)})node[right]{\(\boldsymbol{v}_2\)};
+	\draw[blue,<->](0,0)--node[below]{\(r_1\)}(.5,0);
+	\draw[blue,<->](0,0)--node[above left]{\(r_2\)}(.5,{.5*sqrt(3)});
+\end{tikzpicture}
+\end{document}

@@ -1,1 +1,5 @@
 book
+_minted*
+*.aux
+*.log
+*.pdf

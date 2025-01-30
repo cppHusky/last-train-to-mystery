@@ -1,0 +1,31 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\definecolor{cell}{HTML}{828282}
+\definecolor{on}{HTML}{cf2220}
+\definecolor{off}{HTML}{303030}
+\begin{document}
+\begin{tikzpicture}[x=5mm,y=5mm,every node/.style={text=white}]
+	\foreach \x in {0,1,2,3,4,5}{
+		\foreach \y in {0,1,2,3,4,5}{
+			\draw[line width=.1mm,fill=cell](\x,\y)rectangle({\x+1},{\y+1});
+		}
+	}
+	\foreach \x in {0,2,3,4}{
+		\draw[line width=.1mm,fill=on](\x,0)rectangle({\x+1},1);
+	}
+	\foreach \x in {2,4,5}{
+		\draw[line width=.1mm,fill=on](\x,1)rectangle({\x+1},2);
+	}
+	\foreach \x in {1,5}{
+		\draw[line width=.1mm,fill=off](\x,0)rectangle({\x+1},1);
+	}
+	\foreach \x in {0,1,3}{
+		\draw[line width=.1mm,fill=off](\x,1)rectangle({\x+1},2);
+	}
+	\node at(.5,1.5){\(\times\)};
+	\node at(1.5,1.5){\(\times\)};
+	\node at(2.5,1.5){\(\times\)};
+	\node at(1.5,.5){\(\times\)};
+	\node at(1.5,2.5){\(\times\)};
+\end{tikzpicture}
+\end{document}

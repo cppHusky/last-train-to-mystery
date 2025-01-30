@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{3d,calc}
+\begin{document}
+\begin{tikzpicture}[x={(-4.24264mm,-5.65865mm)},y={(10mm,0mm)},z={(0mm,10mm)}]
+	\tikzset{
+		every point/.style={circle,inner sep={.75\pgflinewidth},opacity=1,draw,solid,fill=black},
+		point/.style={insert path={node[every point,#1]{}}},point/.default={},
+	}
+	\draw[->](-3,0,0)--(3,0,0);
+	\draw[->](0,-3,0)--(0,3,0);
+	\draw[->](0,0,-3)--(0,0,3);
+	\coordinate(you)at(-1,-2,-1);
+	\coordinate(worm)at(2,1,2);
+	\draw[dashed](you)[point]node[below right]{you}--(worm)[point]node[below right]{worm};
+	\draw[->,red](you)--++(-1,-1,-1);
+	\draw[->,blue](worm)--++(.5,.5,.5);
+\end{tikzpicture}
+\end{document}
