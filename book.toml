@@ -7,3 +7,5 @@ title = "解谜末班车"
 
 [output.html]
 mathjax-support = true
+
+[preprocessor.katex]
