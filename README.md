@@ -1,4 +1,4 @@
-# cppHusky.github.io
+# last-train-to-mystery
 
 本仓库存放历年解谜末班车解答及其附件。
 
