@@ -1,0 +1,9 @@
+[book]
+authors = ["cppHusky"]
+language = "en"
+multilingual = true
+src = "src"
+title = "解谜末班车"
+
+[output.html]
+mathjax-support = true
