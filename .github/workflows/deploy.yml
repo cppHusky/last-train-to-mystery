@@ -1,42 +1,26 @@
-name: Deploy
+name: Deploy Cloudflare Page
 on:
   push:
     branches:
       - master
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # To push a branch
-      pages: write  # To push to a GitHub Pages site
-      id-token: write # To update the deployment status
+      contents: read
+      deployments: write
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Install latest mdbook
-        run: |
-          tag=$(curl 'https://api.github.com/repos/rust-lang/mdbook/releases/latest' | jq -r '.tag_name')
-          url="https://github.com/rust-lang/mdbook/releases/download/${tag}/mdbook-${tag}-x86_64-unknown-linux-gnu.tar.gz"
-          mkdir mdbook
-          curl -sSL $url | tar -xz --directory=./mdbook
-          echo `pwd`/mdbook >> $GITHUB_PATH
-      - name: Install mdbook-katex
-        run: |
-          cargo install --force mdbook-katex
-      - name: Build Book
-        run: |
-          # This assumes your book is in the root of your repository.
-          # Just add a `cd` here if you need to change to another directory.
-          mdbook build
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: 'book'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    - uses: actions/checkout@v6
+    - name: Setup rust
+      uses: dtolnay/rust-toolchain@stable
+    - name: Install dependencies
+      run: cargo install mdbook mdbook-katex@0.10.0-alpha
+    - name: Build ./book
+      run: mdbook build
+    - name: Deploy to cloudflare pages
+      uses: cloudflare/wrangler-action@v3
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accoundId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        command: pages deploy ./book --project-name=last-train-to-mystery

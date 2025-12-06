@@ -1,8 +1,11 @@
 [book]
 authors = ["cppHusky"]
-language = "en"
-multilingual = true
+language = "zh-Hans"
 src = "src"
 title = "解谜末班车"
 
+[build]
+build-dir = "book"
+
 [preprocessor.katex]
+after = ["links"]
