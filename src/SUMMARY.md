@@ -45,5 +45,5 @@
 	- [SwitchAndTranspose](yi-si/switch-and-transpose/index.md)
 	<!--
 	- [ColorBlending](yi-si/color-blending/index.md)
-	- [ReadItOverAndOverAgain](yi-si/color/read-it-over-and-over-again/index.md)
 	-->
+	- [ReadItOverAndOverAgain](yi-si/read-it-over-and-over-again/index.md)
