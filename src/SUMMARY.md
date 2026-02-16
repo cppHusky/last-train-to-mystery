@@ -43,7 +43,5 @@
 	- [UnoRubik](yi-si/uno-rubik/index.md)
 	- [QuaterPrime](yi-si/quater-prime/index.md)
 	- [SwitchAndTranspose](yi-si/switch-and-transpose/index.md)
-	<!--
 	- [ColorBlending](yi-si/color-blending/index.md)
-	-->
 	- [ReadItOverAndOverAgain](yi-si/read-it-over-and-over-again/index.md)
