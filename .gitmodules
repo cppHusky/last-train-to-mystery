@@ -1,0 +1,6 @@
+[submodule "2025-puzzle"]
+	path = 2025-puzzle
+	url = git@github.com:cppHusky/2025-puzzle.git
+[submodule "2026-puzzle"]
+	path = 2026-puzzle
+	url = git@github.com:cppHusky/2026-puzzle.git
