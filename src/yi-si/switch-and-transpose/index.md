@@ -15,6 +15,8 @@
 
 本关并不如它初看起来的那样难，稍微花一些时间就能解决；而且也没有什么解题新花样，我就不赘述了。下文只证明任何一个这样的问题都有解，以及给出一定可解的方案。如果想要优化，就请自行探索吧。
 
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116089946114139&bvid=BV1H6ZQBFEWz&cid=36136683823&p=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
 ## 解析
 
 ### 置换群及其基本元素

@@ -10,6 +10,8 @@
 >
 > ![](./preview.png)
 
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116089946114139&bvid=BV1H6ZQBFEWz&cid=36136747110&p=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
 ## 思路
 
 在本题中，你只能看到魔方的主视图，所以首要工作是掌握它的全貌。直接翻面把所有面都过一遍就好了。

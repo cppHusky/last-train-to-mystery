@@ -10,6 +10,8 @@
 
 根据素数定理可以估算，在当前 UNIX 时间 $1.77\times10^9$ 附近质数的密度大约是 4.70%，再加上 3 秒的容错时间，就是 4 倍的概率，要刷出一个 SimPrime 是很简单的。如果遇到接连的四个素数距离比较接近，运气好就可以直通了。
 
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116089946114139&bvid=BV1H6ZQBFEWz&cid=36136683615&p=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
 ## 思路
 
 题面的意思是说时间很重要，而作答内容不重要。
